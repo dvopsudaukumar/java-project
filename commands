@@ -1,0 +1,10 @@
+aws s3 presign s3://DOC-EXAMPLE-BUCKET/test2.txt --expires-in 60
+
+=====
+echo "AWS SAA - C03 Course" > file.txt
+aws kms encrypt --key-id alias/aws-kv --plaintext fileb://file.txt --output text --query CiphertextBlob | base64 --decode > encrypted_file.txt
+ls -la
+cat encrypted_file.txt
+   
+ls -la
+cat decrypted_file.txt
